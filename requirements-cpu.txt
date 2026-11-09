@@ -1,0 +1,10 @@
+# versões testadas (Python 3.11, Linux). Também é preciso o ffmpeg instalado no sistema (comum/04_clipes.py).
+torch==2.13.0
+torchvision==0.28.0
+torchcodec==0.17.0
+transformers==5.19.0
+numpy==2.3.5
+pandas==3.1.0
+pillow==13.0.0
+requests==2.34.2
+packaging==26.3

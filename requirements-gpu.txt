@@ -1,0 +1,3 @@
+# GPU = tudo da CPU + vLLM (testado numa RTX 4090, 24 GB; CUDA 13)
+-r requirements-cpu.txt
+vllm==0.32.0

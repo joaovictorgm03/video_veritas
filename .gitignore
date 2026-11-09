@@ -1,0 +1,45 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.ipynb_checkpoints/
+.pytest_cache/
+
+# ambientes virtuais
+.venv/
+venv/
+env/
+.conda/
+
+# pesos e checkpoints (VideoVeritas = ~17 GB; baixar do ModelScope)
+checkpoints/
+*.safetensors
+*.bin
+*.pt
+*.pth
+*.ckpt
+*.gguf
+*.onnx
+
+# dados e vídeos
+data/
+*.mp4
+*.mov
+*.mkv
+*.webm
+*.avi
+
+# saídas, resultados e logs
+results/
+outputs/
+benchmark/resultados_*.json
+*.jsonl
+*.log
+
+# credenciais e configurações locais
+.env
+*.env
+.cache/
+.vscode/
+.idea/
+.DS_Store
