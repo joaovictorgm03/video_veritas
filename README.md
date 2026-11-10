@@ -65,12 +65,17 @@ Variáveis de ambiente:
 
 O resultado vai para `benchmark/resultados_<cpu|gpu>.json`.
 
-Custos medidos (i9-14900K e RTX 4090, protocolo de 14 frames com raciocínio):
+Custos no i9-14900K e na RTX 4090, por vídeo (3 clipes), com raciocínio:
 
-| | GPU | CPU (fp32, 24 threads) |
+| | GPU (vLLM, bf16) | CPU (transformers, fp32, 24 threads) |
 |---|---|---|
-| tempo por vídeo (3 clipes) | ~10–14 s | ~16 min |
-| memória | 16,6 GB de pesos + cache (o vLLM reserva ~21 GB) | ~35–40 GB de RAM |
+| 14 frames por clipe (protocolo) | 9,8 s em lote; 6,9–16,7 s um vídeo por vez | **14,6 min** (199–455 s por clipe: ~110 s de leitura da entrada + ~0,7 s por token gerado) |
+| 26 frames por clipe | 12,3 s em lote; 7,6–22,0 s um vídeo por vez | ~16 min (286–335 s por clipe: ~190 s de leitura da entrada + ~1 s por token gerado) |
+| memória | 16,6 GB de pesos + cache (o vLLM reserva ~21 GB) | 35–40 GB de RAM |
+
+Todos os valores foram medidos com `benchmark/bench.py`: 6 vídeos na GPU e 1 vídeo (3 clipes) na CPU. O
+modelo é carregado uma vez (~44 s na GPU), e esse tempo não entra na tabela. Os vereditos na CPU foram iguais
+aos da GPU. Na CPU o tempo depende muito do tamanho do raciocínio gerado, que vai de ~120 a ~480 tokens por clipe.
 
 A CPU roda em fp32 porque processadores sem AVX-512 BF16/AMX não fazem bf16 nativo. Os vereditos na CPU
 foram iguais aos da GPU.
