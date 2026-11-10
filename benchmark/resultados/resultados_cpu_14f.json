@@ -1,0 +1,39 @@
+{
+ "modo": "cpu",
+ "threads": 24,
+ "carga_modelo_s": 1.6318683119607158,
+ "por_frames": {
+  "14": [
+   {
+    "video_id": "real_ad866bbc23",
+    "clip": "data/clips/real_ad866bbc23_c0.mp4",
+    "preproc_s": 0.491388491995167,
+    "primeiro_token_s": 108.52717205701629,
+    "geracao_total_s": 455.42233768099686,
+    "tokens_prompt": 5170,
+    "tokens_saida": 478,
+    "resposta": "real"
+   },
+   {
+    "video_id": "real_ad866bbc23",
+    "clip": "data/clips/real_ad866bbc23_c1.mp4",
+    "preproc_s": 0.4031744389794767,
+    "primeiro_token_s": 108.66608773899497,
+    "geracao_total_s": 198.85170347901294,
+    "tokens_prompt": 5170,
+    "tokens_saida": 124,
+    "resposta": "real"
+   },
+   {
+    "video_id": "real_ad866bbc23",
+    "clip": "data/clips/real_ad866bbc23_c2.mp4",
+    "preproc_s": 0.41648836800595745,
+    "primeiro_token_s": 110.15084215800744,
+    "geracao_total_s": 219.64501876803115,
+    "tokens_prompt": 5170,
+    "tokens_saida": 152,
+    "resposta": "real"
+   }
+  ]
+ }
+}

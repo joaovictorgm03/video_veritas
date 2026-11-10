@@ -11,7 +11,8 @@ O vídeo é `fake` quando ≥ 2 dos 3 clipes dizem `fake`, e o score do vídeo �
 ```
 comum/04_clipes.py          corta os 3 clipes de 5 s de cada vídeo (ffmpeg) → data/clips.csv
 gpu/05_inferir_video.py     inferência em lote na GPU (vLLM), com P(fake) pelos logprobs → .jsonl
-benchmark/bench.py          tempo por vídeo na GPU (vLLM) ou na CPU (transformers, fp32)
+gpu/combos_gpu.py           inferência na GPU com frames, tokens e modo configuráveis (inclui o modo direto R5)
+benchmark/                  tempo, memória e comparação das configurações R1–R7 (ver benchmark/README.md)
 third_party/VideoVeritas/   qwen_vl_utils do repositório oficial (Apache-2.0, sem alterações)
 ```
 
@@ -50,6 +51,27 @@ GPU_UTIL=0.88 MAX_LEN=12288 python gpu/05_inferir_video.py ...
 
 Rode a partir da raiz do repositório, porque os caminhos de `clips.csv` são relativos a ela. O script retoma
 de onde parou se o `.jsonl` já existir. `--limit N` processa só N clipes, para teste.
+
+### Modo direto (R5): mais rápido e com AUC maior
+
+O prompt já termina em `<answer>`, então o modelo gera **1 token só**, sem escrever o raciocínio, e o
+P(fake) sai direto da probabilidade desse token. O vídeo é fake quando a média de P(fake) dos 3 clipes
+passa de 0,5.
+
+```bash
+VV_MODEL=checkpoints/VideoVeritas python gpu/combos_gpu.py --nome R5_14f_768t_direto \
+       --frames 14 --tokens 768 --modo direto          # → benchmark/combos/R5_14f_768t_direto.jsonl
+```
+
+| | AUC [IC95] | Reais certos | Fakes certos | GPU s/vídeo | CPU min/vídeo |
+|---|---|---|---|---|---|
+| protocolo original (R1, com raciocínio) | 0,898 [0,839–0,951] | 31/35 | 81/95 | 7,9 | 15,7 |
+| **modo direto (R5)** | **0,945 [0,904–0,976]** | 33/35 | 75/95 | 2,6 | ~4,6 (estimado) |
+
+O ganho de AUC foi significativo: ΔAUC +0,047 [+0,009; +0,091], por bootstrap pareado em 130 vídeos.
+O modo direto não produz justificativa em texto, e o limiar 0,5 acerta menos fakes, então convém
+recalibrá-lo. O mesmo script roda as outras configurações (`--frames`, `--tokens`,
+`--modo raciocinio|direto`). Detalhes em [benchmark/README.md](benchmark/README.md).
 
 ## 3. CPU
 

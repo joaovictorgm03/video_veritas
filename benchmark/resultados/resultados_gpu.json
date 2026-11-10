@@ -1,0 +1,276 @@
+{
+ "modo": "gpu",
+ "carga_modelo_s": 21.04311045096256,
+ "por_frames": {
+  "14": {
+   "latencia_por_video": [
+    {
+     "video_id": "real_ad866bbc23",
+     "label": "real",
+     "preproc_s": 1.0679704640060663,
+     "inferencia_s": 9.374157415993977,
+     "tokens_prompt": [
+      5170,
+      5170,
+      5170
+     ],
+     "tokens_saida": [
+      417,
+      130,
+      152
+     ],
+     "respostas": [
+      "real",
+      "real",
+      "real"
+     ]
+    },
+    {
+     "video_id": "real_195a153fc8",
+     "label": "real",
+     "preproc_s": 0.7357596220099367,
+     "inferencia_s": 6.5946901479619555,
+     "tokens_prompt": [
+      5170,
+      5170,
+      5170
+     ],
+     "tokens_saida": [
+      178,
+      134,
+      127
+     ],
+     "respostas": [
+      "real",
+      "real",
+      "real"
+     ]
+    },
+    {
+     "video_id": "real_75e3021e89",
+     "label": "real",
+     "preproc_s": 0.6715207180241123,
+     "inferencia_s": 15.970342396001797,
+     "tokens_prompt": [
+      5170,
+      5170,
+      5170
+     ],
+     "tokens_saida": [
+      409,
+      414,
+      359
+     ],
+     "respostas": [
+      "fake",
+      "fake",
+      "fake"
+     ]
+    },
+    {
+     "video_id": "fake_2bc080151f",
+     "label": "fake",
+     "preproc_s": 0.25708620803197846,
+     "inferencia_s": 6.88797787198564,
+     "tokens_prompt": [
+      4162,
+      4162,
+      4162
+     ],
+     "tokens_saida": [
+      261,
+      250,
+      128
+     ],
+     "respostas": [
+      "fake",
+      "fake",
+      "fake"
+     ]
+    },
+    {
+     "video_id": "fake_e4a67fc153",
+     "label": "fake",
+     "preproc_s": 0.339387666026596,
+     "inferencia_s": 10.717899390961975,
+     "tokens_prompt": [
+      4162,
+      4162,
+      4162
+     ],
+     "tokens_saida": [
+      471,
+      341,
+      109
+     ],
+     "respostas": [
+      "fake",
+      "fake",
+      "fake"
+     ]
+    },
+    {
+     "video_id": "fake_d9fc4d00db",
+     "label": "fake",
+     "preproc_s": 0.2612586030154489,
+     "inferencia_s": 12.84337899996899,
+     "tokens_prompt": [
+      4162,
+      4162,
+      4162
+     ],
+     "tokens_saida": [
+      474,
+      513,
+      555
+     ],
+     "respostas": [
+      "fake",
+      "fake",
+      "fake"
+     ]
+    }
+   ],
+   "lote": {
+    "videos": 6,
+    "preproc_s": 3.1333403109456412,
+    "inferencia_s": 55.58616213203641
+   }
+  },
+  "26": {
+   "latencia_por_video": [
+    {
+     "video_id": "real_ad866bbc23",
+     "label": "real",
+     "preproc_s": 1.3623795619932935,
+     "inferencia_s": 10.179896031040698,
+     "tokens_prompt": [
+      9538,
+      9538,
+      9538
+     ],
+     "tokens_saida": [
+      129,
+      93,
+      162
+     ],
+     "respostas": [
+      "real",
+      "real",
+      "real"
+     ]
+    },
+    {
+     "video_id": "real_195a153fc8",
+     "label": "real",
+     "preproc_s": 0.8552063670358621,
+     "inferencia_s": 10.412497216952033,
+     "tokens_prompt": [
+      9538,
+      9538,
+      9538
+     ],
+     "tokens_saida": [
+      91,
+      124,
+      92
+     ],
+     "respostas": [
+      "real",
+      "real",
+      "real"
+     ]
+    },
+    {
+     "video_id": "real_75e3021e89",
+     "label": "real",
+     "preproc_s": 0.7319492549868301,
+     "inferencia_s": 21.322132186964154,
+     "tokens_prompt": [
+      9538,
+      9538,
+      9538
+     ],
+     "tokens_saida": [
+      280,
+      253,
+      363
+     ],
+     "respostas": [
+      "fake",
+      "real",
+      "fake"
+     ]
+    },
+    {
+     "video_id": "fake_2bc080151f",
+     "label": "fake",
+     "preproc_s": 0.2599479910568334,
+     "inferencia_s": 14.327836697979365,
+     "tokens_prompt": [
+      7666,
+      7666,
+      7666
+     ],
+     "tokens_saida": [
+      266,
+      300,
+      218
+     ],
+     "respostas": [
+      "fake",
+      "fake",
+      "fake"
+     ]
+    },
+    {
+     "video_id": "fake_e4a67fc153",
+     "label": "fake",
+     "preproc_s": 0.34696694498416036,
+     "inferencia_s": 8.296197165967897,
+     "tokens_prompt": [
+      7666,
+      7666,
+      7666
+     ],
+     "tokens_saida": [
+      181,
+      121,
+      116
+     ],
+     "respostas": [
+      "fake",
+      "fake",
+      "fake"
+     ]
+    },
+    {
+     "video_id": "fake_d9fc4d00db",
+     "label": "fake",
+     "preproc_s": 0.22383055899990723,
+     "inferencia_s": 7.3302933819941245,
+     "tokens_prompt": [
+      7666,
+      7666,
+      7666
+     ],
+     "tokens_saida": [
+      98,
+      121,
+      94
+     ],
+     "respostas": [
+      "fake",
+      "fake",
+      "fake"
+     ]
+    }
+   ],
+   "lote": {
+    "videos": 6,
+    "preproc_s": 3.7490813389304094,
+    "inferencia_s": 70.16268596897135
+   }
+  }
+ }
+}

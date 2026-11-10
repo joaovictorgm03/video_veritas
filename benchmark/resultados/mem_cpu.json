@@ -1,0 +1,25 @@
+{
+ "rss_antes_GiB": 0.7843360900878906,
+ "rss_modelo_carregado_GiB": 33.59788131713867,
+ "14f_256t": {
+  "frames": 14,
+  "tokens_par": 256,
+  "tokens_entrada": 1894,
+  "pico_GiB": 35.3,
+  "s": 35
+ },
+ "14f_768t": {
+  "frames": 14,
+  "tokens_par": 768,
+  "tokens_entrada": 5170,
+  "pico_GiB": 37.4,
+  "s": 109
+ },
+ "26f_768t": {
+  "frames": 26,
+  "tokens_par": 768,
+  "tokens_entrada": 9538,
+  "pico_GiB": 40.0,
+  "s": 189
+ }
+}

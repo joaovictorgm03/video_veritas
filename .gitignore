@@ -32,7 +32,11 @@ data/
 # saídas, resultados e logs
 results/
 outputs/
+# saídas brutas dos scripts de benchmark (o resumo publicado fica em benchmark/resultados/)
 benchmark/resultados_*.json
+benchmark/mem_cpu.json
+benchmark/combos_resultado.csv
+benchmark/combos/
 *.jsonl
 *.log
 
